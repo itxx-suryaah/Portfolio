@@ -1,0 +1,110 @@
+
+.contactwrapper {
+  text-align: center;
+  color: #fff;
+  width: 40%;
+  padding: 7rem;
+  position: absolute;
+  margin-left: 6px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contactwrapper h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 188%;
+  margin-left: -90px;
+
+}
+
+.contactwrapper h2 span {
+  color: #999;
+}
+
+.contactwrapper p {
+  font-size: 23px;
+  margin-top: 0.5rem;
+  opacity: 4.8;
+}
+
+.sociallinks {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  border: none;
+  margin-top: 2.5rem;
+}
+
+.social {
+  /* border:  100px solid blue; */
+  padding: 10px;
+  /* border-radius: 8px; */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+.github:hover {
+  background: #333;
+}
+
+.linkedin:hover {
+  background: #0077b5;
+}
+
+.twitter:hover {
+  background: #1da1f2;
+}
+
+.instagram:hover {
+  background: #cc39a4;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .contactwrapper {
+    width: 90%;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .contactwrapper h2 {
+    font-size: 1.8rem;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .contactwrapper p {
+    font-size: 18px;
+  }
+
+  .sociallinks {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social img {
+    width: 25px;
+    height: 25px;
+  }
+}

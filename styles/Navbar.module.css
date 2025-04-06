@@ -1,0 +1,136 @@
+/* Navbar Styling */
+.navbar {
+  
+  display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      position: fixed;
+      column-gap: 30%;
+      z-index: 10000;
+      margin-top: -5%;
+      padding: 0px;
+      border-radius: 15px;
+      width: 100%;
+      margin-left: 5%;
+      max-width: 1170px;
+      /* margin: -25px auto; */
+      background-size: cover;
+}
+
+/* Logo */
+.logo {
+  width: 50px;
+}
+
+/* Nav Links - Desktop */
+.navLinks {
+  display: flex;
+  gap: 10px;
+  background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Tabs - Default Transparent Background */
+.tab {
+  background: none;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, color 0.3s ease; /* Smooth Transition */
+}
+
+/* Active Tab */
+.active {
+  background-color: white;
+  color: black;
+}
+
+/* Contact Button */
+.contact {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Hide Hamburger on Desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: none;
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    margin-top: -60px;
+   margin-right: -60px;/* Adjust margin-top for responsive views */
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show on screens smaller than 768px */
+  }
+
+  .navLinks {
+    display:flex; /* Hide navigation links by default */
+  }
+
+  .showMenu {
+    display: block; /* Show navigation links when menu is open */
+  }
+}
+
+/* Mobile View (Below 700px) */
+@media (max-width: 700px) {
+  /* Show Hamburger */
+  .hamburger {
+      display: block;
+  }
+
+  /* Hide Normal Nav Links */
+  .navLinks {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 70%;
+      transform: translateX(-50%);
+      width: 60%;
+       
+      border-radius: 10px;
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  /* Show menu when active */
+  .showMenu {
+      display: flex;
+  }
+
+  /* Full Width Buttons on Mobile */
+  .tab {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .contact {
+      width: 30%;
+      margin: 10px auto;
+      top: 6px;
+      right: 10px;
+  }
+}

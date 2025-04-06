@@ -1,0 +1,142 @@
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Two columns: left and right */
+  align-items: center;
+  padding: 0vw;
+  margin-left: 13%;
+  column-gap: 15%;
+  height: 100vh;
+  margin-top: calc(5vh + 50px); /* Adjust for 30px navbar height */
+  z-index: 1000; /* Ensure hero section stays below navbar */
+}
+
+/* Left Content */
+.leftContent {
+  display: grid;
+  row-gap: 0rem; /* Adjusted for grid layout */
+  color: white;
+}
+
+/* Profile and Status */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1rem;
+  margin-left: -5%;
+}
+
+/* Status */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Green Dot with Animation */
+.greenDot {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff6a;
+  border-radius: 50%;
+  margin-right: 6px;
+  box-shadow: 0 0 10px #00ff6a;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #0fc8ce;
+  }
+  100% {
+    box-shadow: 0 0 15px #0da8d3;
+  }
+}
+
+/* Booming Effect */
+.booming {
+  animation: boom 1.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes boom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+/* Hero Title */
+.title {
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: -5rem;
+}
+
+/* Image Styling */
+.heroImage {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Hide Image in Mobile View */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    padding: 8vw;
+    margin-left: 3%;
+    margin-top: calc(5vh + 30px);
+    height: 30vh;
+  }
+
+  .heroImage {
+    display: none; /* Hides image on smaller screens */
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: calc(4vh + 30px);
+    height: 50vh; /* Updated height for better spacing */
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .title {
+    font-size: 5.5vw; /* Adjusted font size for better readability */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
